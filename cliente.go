@@ -12,7 +12,7 @@ type Proceso struct {
 	enviado bool
 }
 func ejecucionProceso(proceso *Proceso) {
-	//fmt.Println("entra a ejecutar procesos")
+	
 	for {
 		time.Sleep(time.Millisecond * 500)
 		if proceso.enviado != true {
@@ -75,7 +75,7 @@ func main(){
 			fmt.Println(err)
 			return
 		}
-		//fmt.Println("Proceso devuelto, presione ENTER para terminar...")
+		
 		break
 	}
 }
