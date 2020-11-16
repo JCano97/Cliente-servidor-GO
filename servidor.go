@@ -91,13 +91,13 @@ func ejecucionProceso(proceso *Proceso) {
 func main() {
 	var input string
 	for i := 1; i < 6; i++ {
-		proceso := Proceso {
+		proceso := &Proceso {
 			idProceso: i,
 			contadorProceso: uint64(0),
 			enviado: false,
 		}
-		listaProcesos = append(listaProcesos, &proceso)
-		go ejecucionProceso(&proceso)
+		listaProcesos = append(listaProcesos, proceso)
+		go ejecucionProceso(proceso)
 		//fmt.Println("entra al for")
 	}
 	go servidor() 
